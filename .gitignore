@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+*.dll
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/lab/workspaces/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.env
+pip-wheel-metadata/
+
+# Packaging / build
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Caches & logs
+.cache/
+**/.cache/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.coverage*
+coverage.xml
+htmlcov/
+*.log
+
+# IDEs & OS files
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# Local config/secrets
+*.local
+*.secret
+

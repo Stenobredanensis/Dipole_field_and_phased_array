@@ -1,0 +1,6 @@
+numpy
+matplotlib
+numba
+jupyter
+ipykernel
+
