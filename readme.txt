@@ -7,7 +7,10 @@ sin(Theta) = Delta(Phi) lambda/(2pi n d)  with Delta(Phi): phase-difference betw
 
 Phased arrays are commonly used in Radar technology, Radio Astronomy, but also in optics e.g. in plasmonic array structures.
 
-Starting with a simple static dipole, this notebook simulates the electric field of a one-dimensional dipole array and computes field components on Cartesian planes (X–Z, X–Y, Y–Z). The core is Numba-optimized (last cell) with no np.cross/np.dot and the loop uses only scalar arithmetic with strictly typed, contiguous arrays. As a better readable version a non optimized simulation is also presented. Dipole near and intermediate fields are calculated but not relevant for a farfield simulation but important at short distances.
+Starting with a simple static dipole, this notebook simulates the electric field of a one-dimensional dipole array and computes field components on Cartesian
+planes (X–Z, X–Y, Y–Z). The core is Numba-optimized (last cell) with no np.cross/np.dot and the loop uses only scalar arithmetic with strictly typed,
+contiguous arrays. As a better readable version a non optimized simulation is also presented. Dipole near and intermediate fields are calculated but not
+relevant for a farfield simulation but important at short distances.
 
 Physical Model (Brief)
 - Point dipoles along the x-axis with preset spacing d = lambda0/2.
