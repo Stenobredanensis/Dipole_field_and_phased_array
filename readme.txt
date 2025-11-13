@@ -1,7 +1,11 @@
 Numba-Optimized Dipole Array Simulation (E-Field)
+Phased arrays are highly relevant in signal transmission and reception as the antenna characteristic can be tuned by the control of the phase-difference between each individual antenna. when indexing the individual antennas continuously from 0 to N it results in two collimated beams which are emitted from the array in an angle Theta to both sides. With: 
 
+sin(Theta) = Delta(Phi) lambda/(2pi n d)  with Delta(Phi): phase-difference between the individual emitters in rad n: refractive index, lambda: wavelength, and d: distance between the individual antennas. 
 
-Starting with a simple static dipole, this notebook simulates the electric field of a one-dimensional dipole array and computes field components on Cartesian planes (X–Z, X–Y, Y–Z). The core is Numba-optimized (last cell) with no np.cross/np.dot and the loop uses only scalar arithmetic with strictly typed, contiguous arrays. As a better readable version a non optimized simulation is also presented. Dipole near and intermediate fields are calculated but not relevant for a farfield simulation.
+Phased arrays are commonly used in Radar technology, Radio Astronomy, but also in optics e.g. in plasmonic array structures.
+
+Starting with a simple static dipole, this notebook simulates the electric field of a one-dimensional dipole array and computes field components on Cartesian planes (X–Z, X–Y, Y–Z). The core is Numba-optimized (last cell) with no np.cross/np.dot and the loop uses only scalar arithmetic with strictly typed, contiguous arrays. As a better readable version a non optimized simulation is also presented. Dipole near and intermediate fields are calculated but not relevant for a farfield simulation but important at short distances.
 
 Physical Model (Brief)
 - Point dipoles along the x-axis with preset spacing d = lambda0/2.
@@ -43,7 +47,7 @@ Key Parameters
 - X–Y plane (z = 0) — prepared:
     Ex_XY = compute_field(X_Y, Y, zeros_XY, 0, positions, phases, p, k)
     
-Extensions (Ideas)
+Extensions ideas
 - 2D/3D arrays: place dipoles on x–y or x–y–z lattices.
 - Amplitude/phase apodization: custom phases and weights per dipole.
 
